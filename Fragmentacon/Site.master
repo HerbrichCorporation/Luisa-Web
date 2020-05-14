@@ -7,7 +7,7 @@
     <meta charset="utf-8" />     
     <title><%: Page.Title %> - Eigene ASP.NET-Anwendung</title>
     <%--<link href="~/Content/Site.css" rel="stylesheet" />--%>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="~/Content/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="~/Content/Page.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <asp:PlaceHolder runat="server">
@@ -91,29 +91,16 @@
                             <i class="fa fa-bars"></i>
                         </a>
                     </div>--%>
-                    <nav>
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <div class="container">
-                                    <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </a>
-                                    <div class="nav-collapse collapse">
-                                        <asp:Menu ID="Menu1" runat="server" IncludeStyleBlock="false" Orientation="Horizontal" CssClass="navbar navbar-fixed-top" StaticMenuItemStyle-CssClass="nav" StaticSelectedStyle-CssClass="active" DynamicMenuStyle-CssClass="dropdown-menu">
-                                            <Items>
-                                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                                                <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="Kontakt" Value="Kontakt"></asp:MenuItem>
-                                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="Info" Value="Info"></asp:MenuItem>
-                                            </Items>
-                                        </asp:Menu>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
+                   
+
+                        <asp:Menu ID="Menu1" runat="server" IncludeStyleBlock="false" Orientation="Horizontal" CssClass="mainnav">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="Kontakt" Value="Kontakt"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="Info" Value="Info"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                  
                 <!-- Header content -->
 
             </header>
@@ -130,7 +117,9 @@
 
 
                 <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                <div id="innercontent">
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </div>
             </main>
 
             <aside>

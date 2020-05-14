@@ -1,6 +1,8 @@
 ﻿/**Website Structure*/
 body {
     margin: 0;
+    background-color:#000000;
+    color:#ddd;
 }
 #page
 {
@@ -39,13 +41,40 @@ body {
                         grid-area: nav;
                         margin-left: 0.5rem;
                     }
-#page main {
-    grid-area: content;
-}
-#page aside {
-    grid-area: side;
-    margin-right: 0.5rem;
-}
+    #page header #headwraper .mainnav {
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+    }
+    #page header #headwraper .mainnav ul li {
+        list-style: none;
+        float: left;
+    }
+        #page header #headwraper .mainnav ul li a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 0px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    #page main {
+        grid-area: content;
+    }
+        #page main #innercontent{
+            margin:5px;
+        }
+            #page main #innercontent p{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size:11px;
+            }
+            #page aside {
+                grid-area: side;
+                margin-right: 0.5rem;
+            }
 #page footer {
     grid-area: footer;
 }
